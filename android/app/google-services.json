@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "272532742483",
+    "project_id": "arham-approverx",
+    "storage_bucket": "arham-approverx.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:272532742483:android:80f29f7d3ed44b0b9281a6",
+        "android_client_info": {
+          "package_name": "com.arhamcorp.approverx"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCiYlcXH-HOwtSGCNorNJ_ur-rJCCbaByM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
