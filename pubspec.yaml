@@ -73,16 +73,16 @@ dev_dependencies:
 flutter_launcher_icons:
   android: true
   ios: true
-  image_path: "assets/images/png/ic_app_logo.png"
+  image_path: "assets/images/png/approverx_logo.png"
   web:
     generate: true
-    image_path: "assets/images/png/ic_app_logo.png"  # Replace with your icon path
+    image_path: "assets/images/png/approverx_logo.png"  # Replace with your icon path
   windows:
     generate: true
-    image_path: "assets/images/png/ic_app_logo.png"
+    image_path: "assets/images/png/approverx_logo.png"
   macos:
     generate: true
-    image_path: "assets/images/png/ic_app_logo.png"
+    image_path: "assets/images/png/approverx_logo.png"
 
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is
