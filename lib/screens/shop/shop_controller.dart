@@ -26,6 +26,8 @@ class ShopController extends GetxController
   Rx<CartResponse> cartList = CartResponse().obs;
   RxList<CartModel> searchList = <CartModel>[].obs; // List to store all groups
 
+  final selectedTab = 0.obs;
+
   @override
   void onInit() {
     // TODO: implement onInit
@@ -40,6 +42,8 @@ class ShopController extends GetxController
 
     tabController.addListener(() {
       if (tabController.indexIsChanging) return;
+
+      selectedTab.value = tabController.index;
 
       if (tabController.index == 0) {
         // Distributor tab selected

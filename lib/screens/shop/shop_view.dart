@@ -6,10 +6,14 @@ import 'package:badges/badges.dart' as badges;
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+import 'distributor/distributor_controller.dart';
+
 class ShopView extends StatelessWidget {
   ShopView({super.key});
 
   final ShopController controller = Get.put(ShopController());
+  final DistributorController distributorController =
+      Get.find<DistributorController>();
 
   @override
   Widget build(BuildContext context) {
@@ -20,12 +24,26 @@ class ShopView extends StatelessWidget {
       appBar: AppBar(
         title: Text('Shop'),
         actions: [
-          IconButton(
-            icon: Icon(Icons.qr_code_scanner),
-            onPressed: () {
-              controller.scanHeaderBarcode(context);
-            },
-          ),
+          Obx(() {
+            final isProductTab = controller.selectedTab.value == 1;
+            final hasDistributor =
+                controller
+                    .distributorController
+                    .selectedDropdownFirmCode
+                    .value
+                    .isNotEmpty;
+
+            if (isProductTab || hasDistributor) {
+              return IconButton(
+                icon: Icon(Icons.qr_code_scanner),
+                onPressed: () {
+                  controller.scanHeaderBarcode(context);
+                },
+              );
+            }
+
+            return const SizedBox.shrink();
+          }),
           Obx(() {
             final data = controller.cartList.value.data;
 
